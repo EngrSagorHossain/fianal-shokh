@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 
 import '../controllers/auth_controller.dart';
@@ -15,7 +14,7 @@ class AuthView extends GetView<AuthController> {
       ),
       body: const Center(
         child: Text(
-          'AuthView is working',
+          'AuthView is working now',
           style: TextStyle(fontSize: 20),
         ),
       ),
