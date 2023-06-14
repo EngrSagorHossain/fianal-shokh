@@ -1,11 +1,12 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello/app/modules/popular_live/views/video_live_view.dart';
 
 import '../../../../utilis/constant.dart';
 
-class PopularView extends GetView {
-  const PopularView({Key? key}) : super(key: key);
+class PopularListView extends GetView {
+  const PopularListView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -110,101 +111,104 @@ class PopularView extends GetView {
   }
 
   Widget buildGridItem() {
-    return Stack(
-      fit: StackFit.passthrough,
-      children: [
-        Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(9),
-            color: Colors.red,
-            image: const DecorationImage(
-              image: AssetImage(
-                "images/girls2.jpeg",
+    return GestureDetector(
+      onTap: () => Get.to(const PopularLiveView()),
+      child: Stack(
+        fit: StackFit.passthrough,
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(9),
+              color: Colors.red,
+              image: const DecorationImage(
+                image: AssetImage(
+                  "images/girls2.jpeg",
+                ),
+                fit: BoxFit.cover,
               ),
-              fit: BoxFit.cover,
+            ),
+            margin: const EdgeInsets.only(left: 15, top: 15),
+          ),
+          Positioned(
+            top: 9,
+            left: 3,
+            child: Stack(
+              fit: StackFit.passthrough,
+              children: const [
+                Image(
+                  image: AssetImage("images/traine.png"),
+                  height: 35,
+                  width: 95,
+                ),
+                Positioned(
+                  top: 13,
+                  left: 34,
+                  child: Text(
+                    "Trainee",
+                    style: TextStyle(
+                      fontSize: 10,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
-          margin: const EdgeInsets.only(left: 15, top: 15),
-        ),
-        Positioned(
-          top: 9,
-          left: 3,
-          child: Stack(
-            fit: StackFit.passthrough,
-            children: const [
-              Image(
-                image: AssetImage("images/traine.png"),
-                height: 35,
-                width: 95,
-              ),
-              Positioned(
-                top: 13,
-                left: 34,
-                child: Text(
-                  "Trainee",
-                  style: TextStyle(
-                    fontSize: 10,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
+          Positioned(
+            top: 13,
+            left: 105,
+            child: Stack(
+              fit: StackFit.passthrough,
+              children: const [
+                Image(
+                  image: AssetImage("images/video.png"),
+                  height: 35,
+                  width: 95,
+                ),
+                Positioned(
+                  top: 11,
+                  left: 23,
+                  child: Text(
+                    "Sagor",
+                    style: TextStyle(
+                      fontSize: 10,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
-        Positioned(
-          top: 13,
-          left: 105,
-          child: Stack(
-            fit: StackFit.passthrough,
-            children: const [
-              Image(
-                image: AssetImage("images/video.png"),
-                height: 35,
-                width: 95,
-              ),
-              Positioned(
-                top: 11,
-                left: 23,
-                child: Text(
-                  "Sagor",
-                  style: TextStyle(
-                    fontSize: 10,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
+          Positioned(
+            left: -17,
+            bottom: 12,
+            child: Stack(
+              fit: StackFit.passthrough,
+              children: const [
+                Image(
+                  image: AssetImage("images/male.jpg"),
+                  height: 20,
+                  width: 125,
+                ),
+                Positioned(
+                  top: 6,
+                  left: 58,
+                  child: Text(
+                    "Male",
+                    style: TextStyle(
+                      fontSize: 7,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
-        Positioned(
-          left: -17,
-          bottom: 12,
-          child: Stack(
-            fit: StackFit.passthrough,
-            children: const [
-              Image(
-                image: AssetImage("images/male.jpg"),
-                height: 20,
-                width: 125,
-              ),
-              Positioned(
-                top: 6,
-                left: 58,
-                child: Text(
-                  "Male",
-                  style: TextStyle(
-                    fontSize: 7,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

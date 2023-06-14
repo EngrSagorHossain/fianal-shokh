@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:hello/app/modules/group_call/views/group_call_view.dart';
+import 'package:hello/app/modules/group_call/views/group_audiolive_view.dart';
+import 'package:hello/app/modules/popular_live/views/video_live_view.dart';
 import 'package:hello/app/modules/profile/views/profile_view.dart';
-import 'package:hello/app/modules/video_live/views/video_live_view.dart';
 
 import '../../../../utilis/constant.dart';
 import '../../live_data/views/live_data_view.dart';
@@ -31,11 +31,11 @@ class _BottomNavigationBarDemoState extends State<BottomNavigationBarDemo> {
   int _currentIndex = 0;
 
   final List<Widget> _children = [
-    TabvarView(),
-    VideoLiveView(),
-    LiveDataView(),
-    GroupCallView(),
-    ProfileView(),
+    const TabvarView(),
+    const PopularLiveView(),
+    const LiveDataView(),
+    const GroupAudioLivelView(),
+    const ProfileView(),
   ];
 
   final List<Color> _unselectedColors = [
@@ -70,7 +70,7 @@ class _BottomNavigationBarDemoState extends State<BottomNavigationBarDemo> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: FaIcon(FontAwesomeIcons.earth,
+            icon: FaIcon(FontAwesomeIcons.earthAmericas,
                 color:
                     _currentIndex == 1 ? _selectedColor : _unselectedColors[1]),
             label: 'Explorer',

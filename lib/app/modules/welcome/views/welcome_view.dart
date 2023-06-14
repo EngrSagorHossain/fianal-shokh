@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hello/app/modules/auth/views/login_view.dart';
+import 'package:hello/app/modules/home/views/bottomnavigation_view.dart';
 
 import '../../../../utilis/constant.dart';
 import '../controllers/welcome_controller.dart';
@@ -58,7 +59,7 @@ class WelcomeView extends GetView<WelcomeController> {
                   padding: const EdgeInsets.all(8),
                   width: screenSize.width * 0.8,
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(
+                    gradient: const LinearGradient(
                         begin: Alignment.centerLeft,
                         end: Alignment.centerRight,
                         colors: [
@@ -103,33 +104,36 @@ class WelcomeView extends GetView<WelcomeController> {
                   height: 15,
                 ),
 //google
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  width: screenSize.width * 0.8,
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Colors.black38,
+                InkWell(
+                  onTap: () => Get.to(const BottomnavigationView()),
+                  child: Container(
+                    padding: const EdgeInsets.all(8),
+                    width: screenSize.width * 0.8,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: Colors.black38,
+                      ),
+                      borderRadius: BorderRadius.circular(40.0),
                     ),
-                    borderRadius: BorderRadius.circular(40.0),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const SizedBox(width: 1.0),
-                      Image.asset(
-                        'assets/icons/icons8-google-48.png',
-                        height: 40,
-                      ),
-                      const SizedBox(width: 35.0),
-                      const Text(
-                        'Sign in with Google',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const SizedBox(width: 1.0),
+                        Image.asset(
+                          'assets/icons/icons8-google-48.png',
+                          height: 40,
                         ),
-                      ),
-                      const SizedBox(width: 20.0),
-                    ],
+                        const SizedBox(width: 35.0),
+                        const Text(
+                          'Sign in with Google',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(width: 20.0),
+                      ],
+                    ),
                   ),
                 ),
                 const SizedBox(

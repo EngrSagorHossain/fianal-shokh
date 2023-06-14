@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hello/app/modules/live_streaming/views/live_streaming_view.dart';
-import 'package:hello/app/modules/live_streaming/views/popular_view.dart';
+import 'package:hello/app/modules/live_streaming/views/popular_list_view.dart';
 
 import '../../../../utilis/constant.dart';
 
@@ -54,7 +54,7 @@ class _TabvarViewState extends State<TabvarView> {
       case 0:
         return const LiveStreamingView(); // Replace with your desired widget for "Popular" tab
       case 1:
-        return const PopularView(); // Replace with your desired widget for "Most Visited" tab
+        return const PopularListView(); // Replace with your desired widget for "Most Visited" tab
       case 2:
         return const LiveStreamingView(); // Replace with your desired widget for "Recent" tab
       // Replace with your desired widget for "Explore" tab

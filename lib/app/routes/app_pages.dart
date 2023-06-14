@@ -1,11 +1,13 @@
 import 'package:get/get.dart';
+import 'package:hello/app/modules/home/views/bottomnavigation_view.dart';
+import 'package:hello/app/modules/popular_live/views/video_live_view.dart';
 
 import '../modules/audio_live/bindings/audio_live_binding.dart';
 import '../modules/audio_live/views/audio_live_view.dart';
 import '../modules/auth/bindings/auth_binding.dart';
 import '../modules/auth/views/auth_view.dart';
 import '../modules/group_call/bindings/group_call_binding.dart';
-import '../modules/group_call/views/group_call_view.dart';
+import '../modules/group_call/views/group_audiolive_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/live_data/bindings/live_data_binding.dart';
 import '../modules/live_data/views/live_data_view.dart';
@@ -13,13 +15,11 @@ import '../modules/live_streaming/bindings/live_streaming_binding.dart';
 import '../modules/live_streaming/views/live_streaming_view.dart';
 import '../modules/messenger/bindings/messenger_binding.dart';
 import '../modules/messenger/views/messenger_view.dart';
+import '../modules/popular_live/bindings/video_live_binding.dart';
 import '../modules/profile/bindings/profile_binding.dart';
 import '../modules/profile/views/profile_view.dart';
-import '../modules/video_live/bindings/video_live_binding.dart';
-import '../modules/video_live/views/video_live_view.dart';
 import '../modules/wallet/bindings/wallet_binding.dart';
 import '../modules/wallet/views/wallet_view.dart';
-import '../modules/welcome/views/welcome_view.dart';
 
 part 'app_routes.dart';
 
@@ -31,7 +31,7 @@ class AppPages {
   static final routes = [
     GetPage(
       name: _Paths.HOME,
-      page: () => const WelcomeView(),
+      page: () => const BottomnavigationView(),
       binding: HomeBinding(),
     ),
     GetPage(
@@ -41,7 +41,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.VIDEO_LIVE,
-      page: () => const VideoLiveView(),
+      page: () => const PopularLiveView(),
       binding: VideoLiveBinding(),
     ),
     GetPage(
@@ -51,7 +51,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.GROUP_CALL,
-      page: () => const GroupCallView(),
+      page: () => const GroupAudioLivelView(),
       binding: GroupCallBinding(),
     ),
     GetPage(

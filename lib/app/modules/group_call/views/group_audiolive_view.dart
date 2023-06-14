@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 
 import '../controllers/group_call_controller.dart';
 
-class GroupCallView extends GetView<GroupCallController> {
-  const GroupCallView({Key? key}) : super(key: key);
+class GroupAudioLivelView extends GetView<GroupCallController> {
+  const GroupAudioLivelView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -577,229 +577,222 @@ class GroupCallView extends GetView<GroupCallController> {
               ),
             ),
 
-            //top container
-            Column(
-              children: [
-                Positioned(
-                  top: 6,
-                  left: 1,
-                  right: 0,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.only(
-                          left: 8,
-                          right: 8,
-                          top: 8,
-                          bottom: 0,
+            //top bottom container
+            Positioned(
+              top: 6,
+              left: 1,
+              right: 0,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
+                    padding: const EdgeInsets.only(
+                      left: 8,
+                      right: 8,
+                      top: 8,
+                      bottom: 0,
+                    ),
+                    height: 40,
+                    width: 225,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Colors.black12,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const CircleAvatar(
+                          backgroundImage: AssetImage("images/Saiful.jpg"),
                         ),
-                        height: 40,
-                        width: 225,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
-                          color: Colors.black12,
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            const CircleAvatar(
-                              backgroundImage: AssetImage("images/Saiful.jpg"),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text(
+                              "MD Sagor Hossain",
+                              style: TextStyle(color: Colors.white),
                             ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
-                                Text(
-                                  "MD Sagor Hossain",
-                                  style: TextStyle(color: Colors.white),
-                                ),
-                                Text("ID: 0124564111",
-                                    style: TextStyle(color: Colors.white)),
-                              ],
-                            ),
-                            const SizedBox(
-                              width: 5,
-                            ),
-                            const Icon(
-                              Icons.add_circle_outlined,
-                              color: Colors.blue,
-                              size: 35,
-                            ),
+                            Text("ID: 0124564111",
+                                style: TextStyle(color: Colors.white)),
                           ],
                         ),
-                      ),
-                      Expanded(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Container(
-                              height: 35,
-                              width: 35,
-                              decoration: const BoxDecoration(
-                                color: Colors.black38,
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(20),
-                                ),
-                              ),
-                              child: const Icon(Icons.power_settings_new_sharp,
-                                  color: Colors.white),
-                            ),
-                            Container(
-                              height: 35,
-                              width: 35,
-                              decoration: const BoxDecoration(
-                                color: Colors.black38,
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(20),
-                                ),
-                              ),
-                              child: const Icon(Icons.close_fullscreen,
-                                  color: Colors.white),
-                            ),
-                            Container(
-                              height: 35,
-                              width: 35,
-                              decoration: const BoxDecoration(
-                                color: Colors.black38,
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(20),
-                                ),
-                              ),
-                              child:
-                                  const Icon(Icons.close, color: Colors.white),
-                            ),
-                          ],
+                        const SizedBox(
+                          width: 5,
                         ),
-                      )
-                    ],
+                        const Icon(
+                          Icons.add_circle_outlined,
+                          color: Colors.blue,
+                          size: 35,
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                const SizedBox(
-                  height: 6,
-                ),
-                Positioned(
-                  top: 4,
-                  left: 1,
-                  right: 0,
-                  child: Row(
-                    children: [
-                      Container(
-                          margin: EdgeInsets.only(left: 4),
-                          height: 25,
-                          width: 115,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.black12,
+                  Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Container(
+                          height: 35,
+                          width: 35,
+                          decoration: const BoxDecoration(
+                            color: Colors.black38,
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(20),
+                            ),
                           ),
-                          child: Row(
-                            //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              IconButton(
-                                icon: const FaIcon(
-                                  FontAwesomeIcons.coins,
-                                  size: 10,
-                                ),
-                                color: Colors.yellow,
-                                onPressed: () {},
-                              ),
-                              const SizedBox(
-                                width: 2,
-                              ),
-                              const Text(
-                                "70582",
-                                style: TextStyle(color: Colors.white),
-                              ),
-                            ],
-                          )),
-                      const SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                          height: 25,
-                          width: 115,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.black12,
+                          child: const Icon(Icons.power_settings_new_sharp,
+                              color: Colors.white),
+                        ),
+                        Container(
+                          height: 35,
+                          width: 35,
+                          decoration: const BoxDecoration(
+                            color: Colors.black38,
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(20),
+                            ),
                           ),
-                          child: Row(
-                            //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                  decoration: BoxDecoration(
-                                    color: Colors.blue,
-                                    borderRadius: BorderRadius.all(
-                                      Radius.circular(20),
-                                    ),
-                                  ),
-                                  child: Icon(
-                                    Icons.star_border,
-                                    color: Colors.white,
-                                  )),
-                              SizedBox(
-                                width: 2,
-                              ),
-                              Text(
-                                "7823459",
-                                style: TextStyle(color: Colors.white),
-                              ),
-                            ],
-                          )),
-                      SizedBox(
-                        width: 15,
+                          child: const Icon(Icons.close_fullscreen,
+                              color: Colors.white),
+                        ),
+                        Container(
+                          height: 35,
+                          width: 35,
+                          decoration: const BoxDecoration(
+                            color: Colors.black38,
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(20),
+                            ),
+                          ),
+                          child: const Icon(Icons.close, color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 6,
+            ),
+            Positioned(
+              top: 55,
+              left: 1,
+              right: 0,
+              child: Row(
+                children: [
+                  Container(
+                      margin: const EdgeInsets.only(left: 4),
+                      height: 25,
+                      width: 115,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.black12,
                       ),
-                      Row(
+                      child: Row(
+                        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            height: 35,
-                            child: ListView.builder(
-                              scrollDirection: Axis.horizontal,
-                              shrinkWrap: true,
-                              itemCount: 3, // Number of items in the list
-                              itemBuilder: (context, index) {
-                                // Build individual list items
-                                return Container(
-                                  padding: EdgeInsets.only(left: 4, top: 2),
-                                  margin: const EdgeInsets.only(left: 2),
-                                  height: 30,
-                                  width: 30,
-                                  decoration: const BoxDecoration(
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: const CircleAvatar(
-                                    backgroundImage:
-                                        AssetImage("images/Saiful.jpg"),
-                                  ),
-                                );
-                              },
+                          IconButton(
+                            icon: const FaIcon(
+                              FontAwesomeIcons.coins,
+                              size: 10,
                             ),
+                            color: Colors.yellow,
+                            onPressed: () {},
                           ),
-                          SizedBox(
-                            height: 35,
-                            child: Container(
-                              padding: const EdgeInsets.only(left: 4, top: 2),
-                              margin: const EdgeInsets.only(left: 4),
-                              height: 40,
-                              width: 40,
-                              decoration: const BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: Colors.black38),
-                              child: const Center(
-                                child: Text(
-                                  "103+",
-                                  style: TextStyle(
-                                      fontSize: 12, color: Colors.white),
-                                ),
-                              ),
-                            ),
+                          const SizedBox(
+                            width: 2,
+                          ),
+                          const Text(
+                            "70582",
+                            style: TextStyle(color: Colors.white),
                           ),
                         ],
-                      )
-                    ],
+                      )),
+                  const SizedBox(
+                    width: 8,
                   ),
-                ),
-              ],
+                  Container(
+                      height: 25,
+                      width: 115,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.black12,
+                      ),
+                      child: Row(
+                        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                              decoration: BoxDecoration(
+                                color: Colors.blue,
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(20),
+                                ),
+                              ),
+                              child: Icon(
+                                Icons.star_border,
+                                color: Colors.white,
+                              )),
+                          const SizedBox(
+                            width: 2,
+                          ),
+                          Text(
+                            "7823459",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ],
+                      )),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  Row(
+                    children: [
+                      Container(
+                        height: 35,
+                        child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          shrinkWrap: true,
+                          itemCount: 3, // Number of items in the list
+                          itemBuilder: (context, index) {
+                            // Build individual list items
+                            return Container(
+                              padding: EdgeInsets.only(left: 4, top: 2),
+                              margin: const EdgeInsets.only(left: 2),
+                              height: 30,
+                              width: 30,
+                              decoration: const BoxDecoration(
+                                shape: BoxShape.circle,
+                              ),
+                              child: const CircleAvatar(
+                                backgroundImage:
+                                    AssetImage("images/Saiful.jpg"),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                      SizedBox(
+                        height: 35,
+                        child: Container(
+                          padding: const EdgeInsets.only(left: 4, top: 2),
+                          margin: const EdgeInsets.only(left: 4),
+                          height: 40,
+                          width: 40,
+                          decoration: const BoxDecoration(
+                              shape: BoxShape.circle, color: Colors.black38),
+                          child: const Center(
+                            child: Text(
+                              "103+",
+                              style:
+                                  TextStyle(fontSize: 12, color: Colors.white),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
             ),
-
             //joined listview
 
             Positioned(
