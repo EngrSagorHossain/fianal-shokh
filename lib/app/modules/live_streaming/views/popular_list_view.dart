@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello/app/modules/popular_live/views/video_live_view.dart';
 
 import '../../../../utilis/constant.dart';
 
@@ -112,7 +111,7 @@ class PopularListView extends GetView {
 
   Widget buildGridItem() {
     return GestureDetector(
-      onTap: () => Get.to(const PopularLiveView()),
+      // onTap: () => Get.to(const PopularLiveView()),
       child: Stack(
         fit: StackFit.passthrough,
         children: [

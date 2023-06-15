@@ -216,6 +216,7 @@ class LoginView extends GetView {
                             InkWell(
                               onTap: () {
                                 FocusScope.of(context).unfocus();
+                                Get.to(RegisterView());
                               },
                               child: const Text(
                                 'account appeal',

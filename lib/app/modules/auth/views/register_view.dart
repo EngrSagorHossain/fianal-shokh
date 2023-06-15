@@ -227,7 +227,7 @@ class RegisterView extends GetView {
                               InkWell(
                                 onTap: () {
                                   FocusScope.of(context).unfocus();
-                                  Get.off(() => AuthView());
+                                  Get.off(() => const AuthView());
                                 },
                                 child: Text(
                                   'Login',

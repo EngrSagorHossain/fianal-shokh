@@ -6,8 +6,10 @@ import '../controllers/profile_controller.dart';
 
 class ProfileView extends GetView<ProfileController> {
   const ProfileView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
+    final authcontroller = Get.find();
     return Scaffold(
       body: Column(
         children: [
@@ -69,7 +71,7 @@ class ProfileView extends GetView<ProfileController> {
                 "ID:3254653228",
                 style: TextStyle(fontSize: 14, color: Colors.grey),
               ),
-              Text(
+              const Text(
                 "Audio",
                 style: TextStyle(color: Colors.deepPurple),
               )
@@ -146,7 +148,7 @@ class ProfileView extends GetView<ProfileController> {
                         width: 130,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(9),
-                            image: DecorationImage(
+                            image: const DecorationImage(
                                 image: AssetImage("images/vip2.png"),
                                 fit: BoxFit.cover)),
                       ),
@@ -166,7 +168,7 @@ class ProfileView extends GetView<ProfileController> {
                         width: 130,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(9),
-                            image: DecorationImage(
+                            image: const DecorationImage(
                                 image: AssetImage("images/verify.png"),
                                 fit: BoxFit.cover)),
                       ),
@@ -186,7 +188,7 @@ class ProfileView extends GetView<ProfileController> {
                         width: 130,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(9),
-                            image: DecorationImage(
+                            image: const DecorationImage(
                                 image: AssetImage("images/coin.png"),
                                 fit: BoxFit.cover)),
                       ),
@@ -206,7 +208,7 @@ class ProfileView extends GetView<ProfileController> {
                         width: 130,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(9),
-                            image: DecorationImage(
+                            image: const DecorationImage(
                                 image: AssetImage("images/ludo2.png"),
                                 fit: BoxFit.cover)),
                       ),

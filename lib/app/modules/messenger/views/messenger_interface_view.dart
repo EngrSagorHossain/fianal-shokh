@@ -162,55 +162,55 @@ class MessengerInterfaceView extends GetView {
                       shape: BoxShape.circle,
                       color: Colors.grey,
                     ),
-                    child: Icon(
+                    child: const Icon(
                       Icons.emoji_emotions,
                       size: 35,
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 3,
                   ),
                   Container(
                     height: 40,
                     width: 40,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.grey,
                     ),
-                    child: Icon(
+                    child: const Icon(
                       Icons.image,
                       size: 35,
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 3,
                   ),
                   Container(
                     height: 40,
                     width: 40,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.grey,
                     ),
-                    child: Icon(
+                    child: const Icon(
                       Icons.games_sharp,
                       size: 35,
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 3,
                   ),
                   Container(
                     height: 40,
                     width: 40,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.grey,
                     ),
-                    child: Icon(
+                    child: const Icon(
                       Icons.video_call,
                       size: 35,
                       color: Colors.white,

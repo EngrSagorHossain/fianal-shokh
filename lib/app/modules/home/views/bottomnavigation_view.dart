@@ -1,8 +1,9 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:hello/app/modules/group_call/views/group_audiolive_view.dart';
-import 'package:hello/app/modules/popular_live/views/video_live_view.dart';
+import 'package:hello/app/modules/live_streaming/views/go_to_live/prepare_to_live.dart';
 import 'package:hello/app/modules/profile/views/profile_view.dart';
 
 import '../../../../utilis/constant.dart';
@@ -31,9 +32,26 @@ class _BottomNavigationBarDemoState extends State<BottomNavigationBarDemo> {
   int _currentIndex = 0;
 
   final List<Widget> _children = [
-    const TabvarView(),
-    const PopularLiveView(),
+    TabvarView(),
     const LiveDataView(),
+    FutureBuilder<List<CameraDescription>>(
+      future: availableCameras(),
+      builder: (BuildContext context,
+          AsyncSnapshot<List<CameraDescription>> snapshot) {
+        if (snapshot.connectionState == ConnectionState.done &&
+            snapshot.hasData &&
+            snapshot.data!.isNotEmpty) {
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            Get.to(() => PrepareToLiveView(camera: snapshot.data![1]));
+          });
+        } else {
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            Get.back();
+          });
+        }
+        return const CircularProgressIndicator();
+      },
+    ),
     const GroupAudioLivelView(),
     const ProfileView(),
   ];
@@ -76,11 +94,39 @@ class _BottomNavigationBarDemoState extends State<BottomNavigationBarDemo> {
             label: 'Explorer',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.video_call,
-                size: 40,
-                color:
-                    _currentIndex == 2 ? _selectedColor : _unselectedColors[2]),
-            label: 'Live',
+            icon: GestureDetector(
+              onTap: () async {
+                await availableCameras().then(
+                  (value) => Get.to(
+                    () => PrepareToLiveView(
+                      camera: value[1],
+                      // onUpdateLiveStreamStatus: onUpdateLiveStreamStatus,
+                    ),
+                  ),
+                );
+              },
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.video_call,
+                    size: 40,
+                    color: _currentIndex == 2
+                        ? _selectedColor
+                        : _unselectedColors[2],
+                  ),
+                  Text(
+                    'Live',
+                    style: TextStyle(
+                      color: _currentIndex == 2
+                          ? _selectedColor
+                          : _unselectedColors[2],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            label: '',
           ),
           BottomNavigationBarItem(
             icon: FaIcon(FontAwesomeIcons.starHalfStroke,
@@ -101,6 +147,8 @@ class _BottomNavigationBarDemoState extends State<BottomNavigationBarDemo> {
 }
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -113,18 +161,22 @@ class HomeScreen extends StatelessWidget {
 }
 
 class CourseScreen extends StatelessWidget {
+  const CourseScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('Live Classes Screen'),
     );
   }
 }
 
 class LiveClassesScreen extends StatelessWidget {
+  const LiveClassesScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('Live Classes Screen'),
     );
   }

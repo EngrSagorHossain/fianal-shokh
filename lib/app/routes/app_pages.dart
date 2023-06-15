@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
-import 'package:hello/app/modules/home/views/bottomnavigation_view.dart';
-import 'package:hello/app/modules/popular_live/views/video_live_view.dart';
+import 'package:hello/app/modules/welcome/views/welcome_view.dart';
 
 import '../modules/audio_live/bindings/audio_live_binding.dart';
 import '../modules/audio_live/views/audio_live_view.dart';
@@ -15,7 +14,6 @@ import '../modules/live_streaming/bindings/live_streaming_binding.dart';
 import '../modules/live_streaming/views/live_streaming_view.dart';
 import '../modules/messenger/bindings/messenger_binding.dart';
 import '../modules/messenger/views/messenger_view.dart';
-import '../modules/popular_live/bindings/video_live_binding.dart';
 import '../modules/profile/bindings/profile_binding.dart';
 import '../modules/profile/views/profile_view.dart';
 import '../modules/wallet/bindings/wallet_binding.dart';
@@ -31,7 +29,7 @@ class AppPages {
   static final routes = [
     GetPage(
       name: _Paths.HOME,
-      page: () => const BottomnavigationView(),
+      page: () => const WelcomeView(),
       binding: HomeBinding(),
     ),
     GetPage(
@@ -39,11 +37,11 @@ class AppPages {
       page: () => const LiveStreamingView(),
       binding: LiveStreamingBinding(),
     ),
-    GetPage(
-      name: _Paths.VIDEO_LIVE,
-      page: () => const PopularLiveView(),
-      binding: VideoLiveBinding(),
-    ),
+    // GetPage(
+    //   name: _Paths.VIDEO_LIVE,
+    //   page: () =>  PopularLiveView(),
+    //   binding: VideoLiveBinding(),
+    // ),
     GetPage(
       name: _Paths.AUDIO_LIVE,
       page: () => const AudioLiveView(),

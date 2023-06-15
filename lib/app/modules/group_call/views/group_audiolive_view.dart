@@ -249,7 +249,7 @@ class GroupAudioLivelView extends GetView<GroupCallController> {
                               )
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           Column(
@@ -264,12 +264,12 @@ class GroupAudioLivelView extends GetView<GroupCallController> {
                                         image: AssetImage("images/girls.jpg"),
                                         fit: BoxFit.cover)),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 5,
                               ),
                               Column(
                                 children: [
-                                  Text(
+                                  const Text(
                                     "ARNAB",
                                     style: TextStyle(
                                         fontSize: 15,
@@ -277,7 +277,7 @@ class GroupAudioLivelView extends GetView<GroupCallController> {
                                         color: Colors.white),
                                   ),
                                   Row(
-                                    children: [
+                                    children: const [
                                       Icon(
                                         FontAwesomeIcons.coins,
                                         size: 12,
@@ -294,7 +294,7 @@ class GroupAudioLivelView extends GetView<GroupCallController> {
                               )
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           Column(
@@ -309,12 +309,12 @@ class GroupAudioLivelView extends GetView<GroupCallController> {
                                         image: AssetImage("images/girls.jpg"),
                                         fit: BoxFit.cover)),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 5,
                               ),
                               Column(
                                 children: [
-                                  Text(
+                                  const Text(
                                     "ARNAB",
                                     style: TextStyle(
                                         fontSize: 15,
@@ -322,7 +322,7 @@ class GroupAudioLivelView extends GetView<GroupCallController> {
                                         color: Colors.white),
                                   ),
                                   Row(
-                                    children: [
+                                    children: const [
                                       Icon(
                                         FontAwesomeIcons.coins,
                                         size: 12,
@@ -339,7 +339,7 @@ class GroupAudioLivelView extends GetView<GroupCallController> {
                               )
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           Column(
@@ -354,12 +354,12 @@ class GroupAudioLivelView extends GetView<GroupCallController> {
                                         image: AssetImage("images/chair.png"),
                                         fit: BoxFit.cover)),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 5,
                               ),
                               Column(
                                 children: [
-                                  Text(
+                                  const Text(
                                     "ARNAB",
                                     style: TextStyle(
                                         fontSize: 15,
@@ -367,7 +367,7 @@ class GroupAudioLivelView extends GetView<GroupCallController> {
                                         color: Colors.white),
                                   ),
                                   Row(
-                                    children: [
+                                    children: const [
                                       Icon(
                                         FontAwesomeIcons.coins,
                                         size: 12,
@@ -404,12 +404,12 @@ class GroupAudioLivelView extends GetView<GroupCallController> {
                                         image: AssetImage("images/chair.png"),
                                         fit: BoxFit.cover)),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 5,
                               ),
                               Column(
                                 children: [
-                                  Text(
+                                  const Text(
                                     "ARNAB",
                                     style: TextStyle(
                                         fontSize: 15,
@@ -417,7 +417,7 @@ class GroupAudioLivelView extends GetView<GroupCallController> {
                                         color: Colors.white),
                                   ),
                                   Row(
-                                    children: [
+                                    children: const [
                                       Icon(
                                         FontAwesomeIcons.coins,
                                         size: 12,
@@ -434,7 +434,7 @@ class GroupAudioLivelView extends GetView<GroupCallController> {
                               )
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           Column(
@@ -449,12 +449,12 @@ class GroupAudioLivelView extends GetView<GroupCallController> {
                                         image: AssetImage("images/girls.jpg"),
                                         fit: BoxFit.cover)),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 5,
                               ),
                               Column(
                                 children: [
-                                  Text(
+                                  const Text(
                                     "ARNAB",
                                     style: TextStyle(
                                         fontSize: 15,
@@ -462,7 +462,7 @@ class GroupAudioLivelView extends GetView<GroupCallController> {
                                         color: Colors.white),
                                   ),
                                   Row(
-                                    children: [
+                                    children: const [
                                       Icon(
                                         FontAwesomeIcons.coins,
                                         size: 12,
@@ -479,7 +479,7 @@ class GroupAudioLivelView extends GetView<GroupCallController> {
                               )
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           Column(
@@ -494,12 +494,12 @@ class GroupAudioLivelView extends GetView<GroupCallController> {
                                         image: AssetImage("images/chair.png"),
                                         fit: BoxFit.cover)),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 5,
                               ),
                               Column(
                                 children: [
-                                  Text(
+                                  const Text(
                                     "ARNAB",
                                     style: TextStyle(
                                         fontSize: 15,
@@ -507,7 +507,7 @@ class GroupAudioLivelView extends GetView<GroupCallController> {
                                         color: Colors.white),
                                   ),
                                   Row(
-                                    children: [
+                                    children: const [
                                       Icon(
                                         FontAwesomeIcons.coins,
                                         size: 12,
@@ -524,7 +524,7 @@ class GroupAudioLivelView extends GetView<GroupCallController> {
                               )
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           Column(
@@ -539,12 +539,12 @@ class GroupAudioLivelView extends GetView<GroupCallController> {
                                         image: AssetImage("images/chair.png"),
                                         fit: BoxFit.cover)),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 5,
                               ),
                               Column(
                                 children: [
-                                  Text(
+                                  const Text(
                                     "ARNAB",
                                     style: TextStyle(
                                         fontSize: 15,
@@ -552,7 +552,7 @@ class GroupAudioLivelView extends GetView<GroupCallController> {
                                         color: Colors.white),
                                   ),
                                   Row(
-                                    children: [
+                                    children: const [
                                       Icon(
                                         FontAwesomeIcons.coins,
                                         size: 12,
@@ -722,31 +722,31 @@ class GroupAudioLivelView extends GetView<GroupCallController> {
                         //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 color: Colors.blue,
                                 borderRadius: BorderRadius.all(
                                   Radius.circular(20),
                                 ),
                               ),
-                              child: Icon(
+                              child: const Icon(
                                 Icons.star_border,
                                 color: Colors.white,
                               )),
                           const SizedBox(
                             width: 2,
                           ),
-                          Text(
+                          const Text(
                             "7823459",
                             style: TextStyle(color: Colors.white),
                           ),
                         ],
                       )),
-                  SizedBox(
+                  const SizedBox(
                     width: 15,
                   ),
                   Row(
                     children: [
-                      Container(
+                      SizedBox(
                         height: 35,
                         child: ListView.builder(
                           scrollDirection: Axis.horizontal,
@@ -755,7 +755,7 @@ class GroupAudioLivelView extends GetView<GroupCallController> {
                           itemBuilder: (context, index) {
                             // Build individual list items
                             return Container(
-                              padding: EdgeInsets.only(left: 4, top: 2),
+                              padding: const EdgeInsets.only(left: 4, top: 2),
                               margin: const EdgeInsets.only(left: 2),
                               height: 30,
                               width: 30,

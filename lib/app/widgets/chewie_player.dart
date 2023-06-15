@@ -13,7 +13,7 @@ class ChewiePlayer extends StatefulWidget {
 
 class _ChewiePlayerState extends State<ChewiePlayer> {
   ChewieController? _chewieController;
-  bool _firstLoad = true;
+  final bool _firstLoad = true;
   final List<OptionItem> _listOptionItems = [];
 
   @override

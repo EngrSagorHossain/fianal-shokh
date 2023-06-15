@@ -78,7 +78,7 @@ Widget rPrimaryElevatedButton({
     ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        primary: primaryColor,
+        backgroundColor: primaryColor,
         fixedSize: fixedSize,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(borderRadius!),

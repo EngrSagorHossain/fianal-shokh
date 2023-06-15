@@ -4,12 +4,14 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart' hide FormData;
+import 'package:hello/app/modules/home/views/bottomnavigation_view.dart';
 import 'package:streaming_shared_preferences/streaming_shared_preferences.dart';
 
 import '../../../../utilis/api_endpoints.dart';
 import '../../../firebase_helper/firebase_helper.dart';
 import '../../../models/profile_model.dart';
 import '../../../routes/app_pages.dart';
+import '../../messenger/server_functions/server_functions.dart';
 
 class AuthController extends GetxController {
   final authLoading = false.obs;
@@ -41,16 +43,7 @@ class AuthController extends GetxController {
     });
   }
 
-  @override
-  void onReady() {
-    super.onReady();
-    // ever(token, _setInitialScreen);
-  }
 
-  @override
-  void onClose() {
-    super.onClose();
-  }
 
   void tryToSignIn({required String mobile, required String password}) async {
     authLoading.value = true;
@@ -79,11 +72,8 @@ class AuthController extends GetxController {
           colorText: Colors.white,
           snackPosition: SnackPosition.BOTTOM,
         );
-        FireBaseHelper().addNewUser(
-            isChatWith: '',
-            uid: profile.value.user!.uid!,
-            userStatus: 'Online');
-        // Get.offAllNamed(Routes.NAV);
+
+        Get.offAll(const BottomnavigationView());
       } else {
         Get.snackbar(
           'Failed',
@@ -94,6 +84,7 @@ class AuthController extends GetxController {
         );
       }
     } catch (e) {
+      print(e);
       authLoading.value = false;
       Get.snackbar(
         'Failed',
@@ -119,9 +110,6 @@ class AuthController extends GetxController {
           },
         ),
       );
-      print(token.value);
-      print(response.statusCode);
-      print(response.data);
       int? statusCode = response.statusCode;
       authLoading.value = false;
       if (statusCode == 200) {
@@ -185,11 +173,8 @@ class AuthController extends GetxController {
         kRegisterWithProfileUrl,
         data: data,
       );
-      print('From register');
-      print(response.statusCode);
       int? statusCode = response.statusCode;
       authLoading.value = false;
-      print(data);
       if (statusCode == 201) {
         token.value = response.data['token'];
         profile.value = Profile.fromJson(response.data['profile']);
@@ -207,10 +192,10 @@ class AuthController extends GetxController {
             isChatWith: '',
             uid: profile.value.user!.uid!,
             userStatus: 'Online');
-        // getFCMDeviceToken().then((fcmDeviceToken) =>
-        //     registerFCMDevice(fcmDeviceToken: fcmDeviceToken!));
+        getFCMDeviceToken().then((fcmDeviceToken) =>
+            registerFCMDevice(fcmDeviceToken: fcmDeviceToken!));
 
-        // Get.offAllNamed(Routes.NAV);
+        Get.offAll(const BottomnavigationView());
       } else {
         Get.snackbar(
           'Failed',
@@ -221,6 +206,8 @@ class AuthController extends GetxController {
         );
       }
     } catch (e) {
+      print('from here');
+      print(e);
       authLoading.value = false;
       Get.snackbar(
         'Failed',

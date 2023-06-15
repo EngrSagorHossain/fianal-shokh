@@ -2,8 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class PopularLiveView extends StatefulWidget {
-  const PopularLiveView({Key? key}) : super(key: key);
-
+  const PopularLiveView({
+    Key? key,
+    required this.channelName,
+    required this.isBroadcaster,
+    this.allowAudioCall = false,
+    this.allowVideoCall = false,
+    required this.activeUsers,
+    required this.viewers,
+    required this.comments,
+    required this.followers,
+    this.pkState = false,
+    this.earnCoins = 0,
+    this.earnLoves = 0,
+    this.title,
+    this.profileImage,
+    this.fullName,
+  }) : super(key: key);
+  final String channelName;
+  final bool isBroadcaster, allowAudioCall, allowVideoCall, pkState;
+  final List<dynamic> activeUsers, viewers, comments, followers;
+  final int earnCoins, earnLoves;
+  final String? title, profileImage, fullName;
   @override
   State<PopularLiveView> createState() => _PopularLiveViewState();
 }
@@ -166,7 +186,7 @@ class _PopularLiveViewState extends State<PopularLiveView> {
                       children: [
                         Row(
                           children: [
-                            Container(
+                            SizedBox(
                               height: 35,
                               child: ListView.builder(
                                 scrollDirection: Axis.horizontal,
@@ -175,7 +195,7 @@ class _PopularLiveViewState extends State<PopularLiveView> {
                                 itemBuilder: (context, index) {
                                   // Build individual list items
                                   return Container(
-                                    padding: EdgeInsets.only(left: 4, top: 2),
+                                    padding: const EdgeInsets.only(left: 4, top: 2),
                                     margin: const EdgeInsets.only(left: 2),
                                     height: 30,
                                     width: 30,

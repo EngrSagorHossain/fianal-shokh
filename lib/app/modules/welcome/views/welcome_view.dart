@@ -75,7 +75,7 @@ class WelcomeView extends GetView<WelcomeController> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         width: 0.1,
                       ),
                       const Icon(

@@ -118,7 +118,7 @@ Widget _buildDropdownItemWithLongText(
             const SizedBox(
               width: 8.0,
             ),
-            Expanded(child: Text("${country.name}")),
+            Expanded(child: Text(country.name)),
           ],
         ),
       ),
@@ -138,7 +138,7 @@ Widget _buildDropdownSelectedItemBuilder(
                 ),
                 Expanded(
                     child: Text(
-                  '${country.name}',
+                  country.name,
                   style: const TextStyle(
                       color: Colors.red, fontWeight: FontWeight.bold),
                 )),

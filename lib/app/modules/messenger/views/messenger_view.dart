@@ -85,7 +85,7 @@ class MessengerView extends GetView<MessengerController> {
                   itemCount: 25,
                   itemBuilder: (BuildContext context, int index) {
                     return Padding(
-                      padding: EdgeInsets.symmetric(vertical: 6.0),
+                      padding: const EdgeInsets.symmetric(vertical: 6.0),
                       child: Container(
                         height: 75,
                         width: double.infinity,
@@ -141,7 +141,7 @@ class MessengerView extends GetView<MessengerController> {
                               ],
                             ),
                             Container(
-                              margin: EdgeInsets.only(right: 25),
+                              margin: const EdgeInsets.only(right: 25),
                               height: 23,
                               width: 23,
                               decoration: const BoxDecoration(

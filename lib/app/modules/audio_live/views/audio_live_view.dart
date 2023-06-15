@@ -211,9 +211,9 @@ class AudioLiveView extends GetView<AudioLiveController> {
                   const SizedBox(
                     height: 5,
                   ),
-                  Text(
+                  const Text(
                     'Samantha Reddy is live.',
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
                       color: Colors.white,

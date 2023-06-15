@@ -6,8 +6,6 @@ import 'package:hello/app/modules/live_streaming/views/popular_list_view.dart';
 import '../../../../utilis/constant.dart';
 
 class TabvarView extends StatefulWidget {
-  const TabvarView({Key? key});
-
   @override
   State<TabvarView> createState() => _TabvarViewState();
 }
